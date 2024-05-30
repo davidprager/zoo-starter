@@ -6,30 +6,22 @@ import datetime
 app = Flask(__name__)
 
 # Connect to the database
-# Insert code to connect to zoo database
-mydb = mysql.connector.connect(
-    host = "localhost",
-    user = "root",
-    password= "dap123",
-    database = "zoo"
-)
+# todo: Insert code to connect to zoo database
 
 # set up the routes
 @app.route('/')
 def home():
-    # Link to the index page.
-    return render_template('index.html')
+    # todo: Link to the index page.
+    return render_template()
 
 @app.route('/schedule')
 def schedule():
-    # Get today's date
-    d = datetime.datetime.now()
-    date_string = f'{d.month}/{d.day}/{d.year}'
-    # Create dictionary of events
-    events = {"10:00": "Zoo opens", "12:00" : "Lunch Time", "15:00": "Zoo closes"}
-    # Link to the schedule page.  Pass the date as a parameter
-    return render_template('schedule.html', date = date_string, schedule = events
-                           )
+    # todo: Get today's date
+
+    # todo: Create dictionary of events
+
+    # todo: Link to the schedule page.  Pass the date as a parameter
+    return render_template()
 
 @app.route('/animals')
 def animals():
